@@ -150,7 +150,7 @@ display: flex;
 }
 
 #home {
-    min-height: 100vh;
+    min-height: 105vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,7 +183,7 @@ display: flex;
 
 /*about-me page*/
 #about-me {
-    min-height: 100vh;
+    min-height: 105vh;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -202,6 +202,7 @@ display: flex;
     margin-left: 180px;
     line-height: 1.4;
     padding-bottom: 50px;
+    transition-delay: .1s;
 }
 
 .highlight {
@@ -213,6 +214,7 @@ display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     margin-left: 100px;
+    transition-delay: .2s;
 }
 
 h4 {
@@ -223,16 +225,19 @@ h4 {
     border-radius: 200px;
     width: 150px;
     text-align: center;
+    transition-delay: .3s;
 }
 
 .resume {
     color: var(--purple);
+    transition-delay: .3s;
 }
 
 .about-me-pointers
 {
     align-content: center;
     align-self: center;
+    transition-delay: .4s;
 }
 
 /*Projects Page*/
@@ -249,10 +254,6 @@ h4 {
 .projects-title {
     font-size: 40px;
     padding-bottom: 100px;
-}
-
-.project-container {
-
 }
 
 h5 {
@@ -273,6 +274,11 @@ h6 {
     display: flex;
 }
 
+.photo-container-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .project-picture {
     width: 300px;
     opacity: .4;
@@ -287,6 +293,16 @@ margin-left: 220px;
 padding: 30px 10px;
 text-align: center;
 }
+
+.project-description-left {
+    position: relative;
+    bottom: 140px;
+    color: var(--white);
+    background-color: var(--purple);
+    padding: 30px 10px;
+    text-align: center;
+    margin-right: 220px;
+    }
 
 .skills-used {
     position: relative;
@@ -303,4 +319,40 @@ text-align: center;
     width: 50px;
     position: relative;
     bottom: 100px;
+    opacity: .4;
+    transition: opacity .3s;
+}
+
+.left {
+text-align: left;
+}
+
+.proj-links:hover .icons{
+    opacity: 1;
+}
+
+/* Animation on Scroll*/
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transition: all .8s;
+    transform: translateX(10%);
+}
+
+.hidden-left {
+    transform: translateX(-20%);
+    transition-delay: .1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
 }
