@@ -156,6 +156,7 @@ display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+    border-bottom: 4px dashed var(--purple);
 }
 /*Arrows pointers*/
 .pointers {
@@ -164,6 +165,7 @@ display: flex;
     justify-content: space-around;
     width: 50%;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .pointers:hover .pointer a{
@@ -195,14 +197,13 @@ display: flex;
     font-size: 40px;
     padding-bottom: 50px;
 }
-
+#contact-me p,
 #about-me p {
     color: var(--purple);
     font-size: 18px;
     margin-left: 180px;
     line-height: 1.4;
     padding-bottom: 50px;
-    transition-delay: .1s;
 }
 
 .highlight {
@@ -214,7 +215,6 @@ display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     margin-left: 100px;
-    transition-delay: .2s;
 }
 
 h4 {
@@ -225,19 +225,16 @@ h4 {
     border-radius: 200px;
     width: 150px;
     text-align: center;
-    transition-delay: .3s;
 }
 
 .resume {
     color: var(--purple);
-    transition-delay: .3s;
 }
 
 .about-me-pointers
 {
     align-content: center;
     align-self: center;
-    transition-delay: .4s;
 }
 
 /*Projects Page*/
@@ -249,6 +246,7 @@ h4 {
     justify-content: center;
     align-items: flex-end;
     text-align: right;
+    border-bottom: 4px dashed var(--purple);
 }
 
 .projects-title {
@@ -285,13 +283,13 @@ h6 {
 }
 
 .project-description {
-position: relative;
-bottom: 140px;
-color: var(--white);
-background-color: var(--purple);
-margin-left: 220px;
-padding: 30px 10px;
-text-align: center;
+    position: relative;
+    bottom: 140px;
+    color: var(--white);
+    background-color: var(--purple);
+    margin-left: 220px;
+    padding: 30px 10px;
+    text-align: center;
 }
 
 .project-description-left {
@@ -331,6 +329,53 @@ text-align: left;
     opacity: 1;
 }
 
+/*Contact Me Page*/
+
+#contact-me {
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    border-bottom: 4px dashed var(--purple);
+}
+
+.contact-me-title {
+    font-size: 40px;
+    padding-bottom: 100px;
+}
+
+
+.contact-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.delay-one {
+    transition-delay: .5s;
+}
+
+.delay-two {
+    transition-delay: 1s;
+}
+
+.contact-links a {
+        color: var(--purple);
+        border: 3px solid var(--purple);
+        padding: 20px 50px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        display: block;
+        width: 280px;
+    }
+
+.contact-links:hover a{
+    color: var(--white);
+    border: 3px solid var(--white);
+}
+
 /* Animation on Scroll*/
 
 .hidden {
@@ -343,6 +388,22 @@ text-align: left;
 .hidden-left {
     transform: translateX(-20%);
     transition-delay: .1s;
+}
+
+.delay-one {
+    transition-delay: .2s;
+}
+
+.delay-two {
+    transition-delay: .3s;
+}
+
+.delay-three {
+    transition-delay: .4s;
+}
+
+.delay-four {
+    transition-delay: .5s;
 }
 
 .show {
