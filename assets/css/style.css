@@ -417,3 +417,60 @@ text-align: left;
         transition: none;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    * {
+        margin-bottom: -350px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex: 0 0 100%;
+        min-height: 70vh;
+        justify-content: flex-start;
+        padding-top: 3rem;
+    }
+
+    .intro {
+        flex: 0 0 30%;
+    }
+
+    nav {
+        flex: 0 0 55%;
+        width: 400px;
+        z-index: 3;
+    }
+
+    .get-in-touch {
+        flex: 0 0 0;
+        z-index: 3;
+    }
+
+    .sticky {
+        position: relative;
+    }
+
+    .socials {
+        position: absolute;
+        align-self: flex-end;
+    }
+
+    #home {
+        position: relative;
+        min-height: 0;
+    }
+
+    main {
+        position: relative;
+        bottom: 320px
+    }
+
+    #home img {
+        width: 350px;
+        position: relative;
+        left: 200px;
+    }
+}
