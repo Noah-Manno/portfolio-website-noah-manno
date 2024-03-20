@@ -552,6 +552,9 @@ text-align: left;
         padding-right: 0;
     }
 
+    header {
+        justify-content: center;
+    }
 
     h1 {
         font-size: 40px;
@@ -567,19 +570,35 @@ text-align: left;
     }
 
     .get-in-touch {
-        margin-left: 20px;
+        margin-left: 0px;
+        position: relative;
+        top: 30px;
+        justify-content: center;
+        align-self: center;
+        flex: 0 0 22.5%;
     }
 
     #home img {
         left: 0;
-        width: 260px;
+        width: 200px;
+        padding-top: 170px;
     }
 
     .socials {
-        justify-content: flex-end;
+        justify-content: center;
         position: relative;
-        margin-right: 20px;
-        bottom: 180px;
+        margin-right: 0px;
+    }
+
+    .socials img {
+        width: 60px;
+    }
+
+    .get-in-touch a {
+        color: var(--purple);
+        border: 3px solid var(--purple);
+        padding: 12px 40px;
+
     }
 
     nav {
@@ -591,13 +610,13 @@ text-align: left;
     }
 
     #about-me {
-        min-height: 90vh;
+        min-height: 100vh;
     }
 
     #contact-me {
         text-align: center;
         align-items: center;
-        min-height: 75vh;
+        min-height: 100vh;
     }
 
     #contact-me p {
@@ -621,6 +640,23 @@ text-align: left;
         opacity: 1;
         filter: blur(0);
         transform: translateX(0);
+    }
+
+    #about-me p {
+        font-size: 16px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .skills {
+        width: 100%;
+        text-align: center;
+        align-content: center;
+    }
+
+    h4 {
+        width: 150px;
+        margin-left: 0;
     }
 }
 
