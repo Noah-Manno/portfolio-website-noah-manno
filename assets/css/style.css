@@ -189,7 +189,7 @@ display: flex;
     text-align: right;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     border-bottom: 4px dashed var(--purple);
 }
 
@@ -449,7 +449,7 @@ text-align: left;
     }
 
     .get-in-touch {
-        flex: 0 0 0;
+        flex: 0 0 15%;
         z-index: 3;
     }
 
@@ -458,8 +458,7 @@ text-align: left;
     }
 
     .socials {
-        position: absolute;
-        align-self: flex-end;
+
     }
 
     #home {
@@ -476,12 +475,18 @@ text-align: left;
         width: 350px;
         position: relative;
         left: 200px;
+        bottom: 50px;
     }
 }
 
 @media screen and (max-width: 760px) {
+    .page {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
     .get-in-touch {
-        text-align: right;
+        text-align: left;
+        margin-top: 50px;
     }
 
     header {
@@ -506,11 +511,110 @@ text-align: left;
         flex: 0 0 100px;
         margin-right: 0;
     }
-
     #home img {
-        left: 0
+        left: 150px;
+        width: 270px;
+        bottom: 50px;
+    }
+
+   main {
+    margin-top: 50px;
+    }
+
+    .get-in-touch {
+        flex: 0 0 30%;
+    }
+
+    #about-me {
+        text-align: center;
+    }
+
+    #about-me p {
+        margin-left: 0;
+    }
+
+    .skills {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    h4 {
+        width: 180px;
     }
 
 }
 
+
+@media screen and (max-width: 600px) {
+    
+    .page {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 50px;
+    }
+
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .get-in-touch {
+        margin-left: 20px;
+    }
+
+    #home img {
+        left: 0;
+        width: 260px;
+    }
+
+    .socials {
+        justify-content: flex-end;
+        position: relative;
+        margin-right: 20px;
+        bottom: 180px;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 50px;
+        margin-top: 0;
+        justify-content: center;
+        background-color: black;
+    }
+
+    nav ul li {
+        flex: 0 0 30%;
+    }
+
+    .pointers {
+        padding-top: 0;
+    }
+
+    #about-me {
+        min-height: 90vh;
+    }
+
+    #contact-me {
+        text-align: center;
+        align-items: center;
+        min-height: 75vh;
+    }
+
+    #contact-me p {
+        margin-left: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
 
