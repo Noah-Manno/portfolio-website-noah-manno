@@ -69,6 +69,7 @@ h3 {
     font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
+
 }
 
 nav {
@@ -168,8 +169,7 @@ main {
 
 /*about-me page*/
 #about-me {
-    min-height: 900px;
-    text-align: right;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -184,9 +184,8 @@ main {
 #about-me p {
     color: var(--purple);
     font-size: 18px;
-    margin-left: 120px;
     line-height: 1.4;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .highlight {
@@ -196,14 +195,13 @@ main {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-left: 100px;
+    justify-content: center;
 }
 
 h4 {
     color: var(--white);
     padding: 10px 30px 10px 30px;
-    margin: 10px 0 10px 10px;
+    margin: 10px 10px 10px 10px;
     border: 1px solid var(--purple);
     border-radius: 200px;
     width: 150px;
@@ -223,12 +221,11 @@ h4 {
 /*Projects Page*/
 
 #projects {
-    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    text-align: right;
+    text-align: center;
     border-bottom: 4px dashed var(--purple);
 }
 
@@ -319,8 +316,8 @@ text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    text-align: right;
+    align-items: center;
+    text-align: center;
     border-bottom: 4px dashed var(--purple);
 }
 
@@ -401,7 +398,29 @@ text-align: left;
     }
 }
 
-@media only screen and (min-width: 1189px) {
+@media only screen and (min-width: 552px) {
+
+    #about-me {
+        text-align: right;
+    }
+
+    #about-me p {
+        margin-left: 120px;
+    }
+
+    .skills {
+        margin-left: 100px;
+        justify-content: flex-end;
+    }
+
+    #contact-me {
+        align-items: flex-end;
+        text-align: right;
+    }
+
+}
+
+@media only screen and (min-width: 1012px) {
 
     .container {
         justify-content: space-around;
@@ -453,5 +472,13 @@ text-align: left;
 
     #home img {
     width: 500px
+}
+
+#about-me {
+    min-height: 900px;
+}
+
+#projects {
+    min-height: 800px;
 }
 }
