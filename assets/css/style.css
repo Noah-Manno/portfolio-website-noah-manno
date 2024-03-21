@@ -17,8 +17,8 @@ body {
 }
 
 .page {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     margin-left: auto;
     margin-right: auto;
     min-height: 100vh;
@@ -29,51 +29,36 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 /*Header Flex Box*/
 header {
     display: flex;
     flex-direction: column;
-
 }
 /*Header Sizing*/
 header {
-    flex: 0 0 400px;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    flex: 0 0 800px;
+    padding-top: 2rem;
     max-height: 100vh;
-    min-height: 768px;
     text-align: left;
-
-}
-
-/*Sticky Header*/
-.sticky {
-    top: 0;
-    position: sticky;
-}
-
-.intro {
-    display: block;
-    height: 130px;
 }
 
 h1 {
     color: var(--white);
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 h2 {
     color: var(--white);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -81,29 +66,13 @@ h2 {
 
 h3 {
     color: var(--purple);
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-/*nav bar*/
 nav {
-    display: block;
-    margin-bottom: 50px;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-nav ul li {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    margin-right: 20vw;
-    text-decoration: none;
-    border-bottom: 1px solid var(--purple);
+    display: none;
 }
 
 .element {
@@ -124,11 +93,9 @@ nav ul li {
 
 /*contact me link button*/
 .get-in-touch {
-    margin-top: 50px;
-    display: block;
-
-
+    margin-top: 35px;
 }
+
 .get-in-touch a {
     color: var(--purple);
     border: 3px solid var(--purple);
@@ -146,9 +113,7 @@ border: 3px solid var(--white);
 /*social media links*/
 
 .socials {
-    display: block;
     margin-top: 50px;
-
 }
 
 .socials img {
@@ -161,18 +126,20 @@ border: 3px solid var(--white);
 }
 
 main {
-    overflow: hidden;
-    flex: 0 0 400px;
+    flex: 0 0 100%;
 }
 
 #home {
-    min-height: 850px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
     border-bottom: 4px dashed var(--purple);
+}
+
+#home img {
+    width: 400px
 }
 /*Arrows pointers*/
 .pointers {
@@ -217,7 +184,7 @@ main {
 #about-me p {
     color: var(--purple);
     font-size: 18px;
-    margin-left: 180px;
+    margin-left: 120px;
     line-height: 1.4;
     padding-bottom: 50px;
 }
@@ -398,11 +365,11 @@ text-align: left;
     opacity: 0;
     filter: blur(3px);
     transition: all .8s;
-    transform: translateX(10%);
+    transform: translateX(-10%);
 }
 
 .hidden-left {
-    transform: translateX(-20%);
+    transform: translateX(10%);
     transition-delay: .1s;
 }
 
@@ -432,4 +399,59 @@ text-align: left;
     .hidden {
         transition: none;
     }
+}
+
+@media only screen and (min-width: 1189px) {
+
+    .container {
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    main {
+        flex: 0 0 450px;
+    }
+
+    /*Header Sizing*/
+    header {
+    flex: 0 0 400px;
+    min-height: 768px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+    .get-in-touch {
+        margin-bottom: 70px;
+    }
+    
+    nav {
+    display: block;
+    margin-bottom: 70px;
+}
+
+    nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    nav ul li {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-right: 205px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--purple);
+}
+
+    #home {
+    justify-content: center;
+    min-height: 850px;
+}
+
+    #home img {
+    width: 500px
+}
 }
