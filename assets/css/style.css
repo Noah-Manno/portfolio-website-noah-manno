@@ -31,24 +31,26 @@ body {
     flex-direction: row;
     justify-content: space-around;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 /*Header Flex Box*/
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
 }
 /*Header Sizing*/
 header {
-    flex: 0 0 50%;
+    flex: 0 0 400px;
     padding-top: 6rem;
     padding-bottom: 6rem;
     max-height: 100vh;
     min-height: 768px;
     text-align: left;
-    justify-content: space-between;
+
 }
+
 /*Sticky Header*/
 .sticky {
     top: 0;
@@ -56,9 +58,8 @@ header {
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    height: 10vh;
+    display: block;
+    height: 130px;
 }
 
 h1 {
@@ -87,7 +88,8 @@ h3 {
 
 /*nav bar*/
 nav {
-    margin-top: 50px;
+    display: block;
+    margin-bottom: 50px;
 }
 
 nav ul {
@@ -121,6 +123,12 @@ nav ul li {
 }
 
 /*contact me link button*/
+.get-in-touch {
+    margin-top: 50px;
+    display: block;
+
+
+}
 .get-in-touch a {
     color: var(--purple);
     border: 3px solid var(--purple);
@@ -138,7 +146,9 @@ border: 3px solid var(--white);
 /*social media links*/
 
 .socials {
-display: flex;
+    display: block;
+    margin-top: 50px;
+
 }
 
 .socials img {
@@ -150,8 +160,13 @@ display: flex;
     border-radius: 100%;
 }
 
+main {
+    overflow: hidden;
+    flex: 0 0 400px;
+}
+
 #home {
-    min-height: 517px;
+    min-height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,7 +201,7 @@ display: flex;
 
 /*about-me page*/
 #about-me {
-    min-height: 105vh;
+    min-height: 900px;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -241,7 +256,7 @@ h4 {
 /*Projects Page*/
 
 #projects {
-    min-height: 100vh;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -333,7 +348,7 @@ text-align: left;
 /*Contact Me Page*/
 
 #contact-me {
-    min-height: 105vh;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
